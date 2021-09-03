@@ -7,6 +7,9 @@
   "bin": {
     "ftp-deploy": "dist/cli.js"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "tsc",
     "deploy": "tsc && node ./dist/cli.js --log-level verbose ---server kangangga.com --protocol ftp --username \"ftp-deploy@kangangga.com\" --password \"actualPasswordHere\" --exclude dist/** --exclude **/.git* --exclude **/.git*/** --exclude **/node_modules/**",

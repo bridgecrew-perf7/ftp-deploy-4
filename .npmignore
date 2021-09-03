@@ -11,6 +11,6 @@ src/
 
 # all test files
 *.test.*
-
+.npmrc
 # typescript types folder
 @types/

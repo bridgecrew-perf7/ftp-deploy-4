@@ -11,7 +11,6 @@ import multiMatch from "multimatch";
 
 export function applyExcludeFilter(stat: Stats, excludeFilter: string[]) {
   // match exclude, return immediatley
-  //  d05d260a-2135-47a3-9d71-7c7ddbc59023
   if (excludeFilter.length > 0) {
     const pathWithFolderSlash = stat.path + (stat.isDirectory() ? "/" : "");
     const excludeMatch = multiMatch(pathWithFolderSlash, excludeFilter, {

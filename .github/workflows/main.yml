@@ -1,9 +1,9 @@
 name: Publish to NPM
 
-on:
-  release:
-    branches: [ main ]
-
+# on:
+#   release:
+#     branches: [ main ]
+  on: push
 jobs:
   publish:
     runs-on: ubuntu-latest

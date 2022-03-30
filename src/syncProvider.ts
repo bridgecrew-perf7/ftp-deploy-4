@@ -108,7 +108,7 @@ export class FTPSyncProvider implements ISyncProvider {
             try {
                 await retryRequest(this.logger, async () => await this.client.remove(filePath));
             }
-            catch (e) {
+            catch (e: any) {
                 // this error is common when a file was deleted on the server directly
                 if (e.code === ErrorCode.FileNotFoundOrNoAccess) {
                     this.logger.standard("File not found or you don't have access to the file - skipping...");

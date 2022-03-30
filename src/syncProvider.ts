@@ -167,6 +167,7 @@ export class FTPSyncProvider implements ISyncProvider {
         // create new folders
         for (const file of diffs.upload.filter(item => item.type === "folder")) {
             await this.createFolder(file.name);
+             await this.uploadFile('dummy.txt', "upload"); // to prevent "421 No transfer timeout"
         }
 
         // upload new files
